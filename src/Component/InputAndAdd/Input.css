@@ -1,0 +1,34 @@
+.input-button {
+    display: flex;
+    gap: 0px;
+    width: 100%;
+}
+
+input {
+    border-style: none;
+    /* width: calc(100% - 15px - 70px); */
+    background-color: #25273c;
+    color: white;
+    border-radius: 5px;
+    padding: 0px;
+    height: 50px;
+    padding-left: 15px;
+    margin-bottom: 30px;
+    flex: 1;
+  }
+  
+  
+  .add-button {
+    height: 50px;
+    width: 70px;
+    background-color: white;
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0px;
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  .add-button:hover {
+    cursor: pointer;
+    border-color: rgb(89, 113, 190);
+  }
