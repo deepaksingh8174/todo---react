@@ -10,32 +10,24 @@ function App() {
 
   const[todoList, SettodoList] = useState([])
   const[activeToDoCount, setActiveToDoCount] = useState(0)
+  const[todoStatus, SettodoStatus] = useState("")
 
   useEffect(() => {
       const todo = JSON.parse(localStorage.getItem('todo')) || [];
-      SettodoList(todo)
-      
-      
+      SettodoList(todo) 
   }, [])
+  
 
   useEffect(() => {
-    let count = 0;
-    todoList.forEach((val) => {
-    if(val.isCompleted === false) {
-       count = count +1;
-    }
-    })
-    console.log(count)
+    const count = todoList.reduce((currval, value) =>  !value.isCompleted? currval +1 : currval + 0 , 0)
     setActiveToDoCount(count)
-    console.log(activeToDoCount)
-  }, [SettodoList])
-
+  }, [todoList])
 
 
 
   const generateUniqueId = () => {
     return `${Date.now()}-${Math.floor(Math.random() * 10000)}`;
-};
+}
 
 
 
@@ -64,9 +56,9 @@ function App() {
 
         <Input  AddToDo = {AddTodo}/>
 
-        <ToDoList  ToDoList ={ todoList}/>
+        <ToDoList  ToDoList = { todoList} status = {todoStatus}  setToDoList = {SettodoList}  setStatus = {SettodoStatus}/>
 
-        <Footer ToDoList ={ todoList}/>
+        <Footer count = {activeToDoCount} setStatus = {SettodoStatus}/>
 
         </div>
 
