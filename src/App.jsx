@@ -9,11 +9,28 @@ import ToDoList from './Component/ToDoList/ToDoList'
 function App() {
 
   const[todoList, SettodoList] = useState([])
+  const[activeToDoCount, setActiveToDoCount] = useState(0)
 
   useEffect(() => {
       const todo = JSON.parse(localStorage.getItem('todo')) || [];
       SettodoList(todo)
+      
+      
+  }, [])
+
+  useEffect(() => {
+    let count = 0;
+    todoList.forEach((val) => {
+    if(val.isCompleted === false) {
+       count = count +1;
+    }
+    })
+    console.log(count)
+    setActiveToDoCount(count)
+    console.log(activeToDoCount)
   }, [SettodoList])
+
+
 
 
   const generateUniqueId = () => {
@@ -49,7 +66,7 @@ function App() {
 
         <ToDoList  ToDoList ={ todoList}/>
 
-        <Footer />
+        <Footer ToDoList ={ todoList}/>
 
         </div>
 

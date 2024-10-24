@@ -44,6 +44,10 @@
     width: 27px;
 }
 
+.cross-image:hover {
+    cursor: pointer;
+}
+
 p {
     color: white;
 }

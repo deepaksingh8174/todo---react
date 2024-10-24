@@ -11,7 +11,7 @@ const todoItems = localStorage.getItem('todo')
 if (todoItems != null) {
     const toDos = JSON.parse(todoItems)
     toDoList = toDos
-    console.log(toDoList)
+    // console.log(toDoList)
 }
 
 

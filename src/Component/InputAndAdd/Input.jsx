@@ -5,7 +5,6 @@ import './Input.css'
 export  const  Input=({AddToDo})=> {
 
     const [input, setInput] = useState('')
-    console.log(input)
 
   return (
     <div className='input-button'>
