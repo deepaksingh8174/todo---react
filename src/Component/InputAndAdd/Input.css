@@ -6,7 +6,6 @@
 
 input {
     border-style: none;
-    /* width: calc(100% - 15px - 70px); */
     background-color: #25273c;
     color: white;
     border-radius: 5px;
@@ -23,7 +22,7 @@ input {
     width: 70px;
     background-color: white;
     border: 0.5px solid rgba(255, 255, 255, 0.2);
-    border-radius: 0px;
+    border-radius: 8px;
     padding: 0px;
     margin: 0px;
   }

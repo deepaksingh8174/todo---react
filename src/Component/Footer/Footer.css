@@ -1,18 +1,21 @@
 .footer {
     height: 50px;
     width: 100%;
-    background-color: green;
+    background-color: #25273c;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
   }
   
   .middle-footer {
     display: flex;
     justify-content: space-between;
     width: 232px;
-    border: 3px solid red;
+    /* border: 3px solid red; */
     align-items: center;
+    
   }
 
   .todo-status:hover {

@@ -39,12 +39,15 @@ function ToDoList(props) {
 
     function  markCompleted(id) {
       const todo = props.ToDoList.map((val) => val.id == id? {...val , isCompleted : !val.isCompleted}: val)
-      console.log(props.ToDoList)
-      console.log(id)
-      console.log(todo)
       localStorage.setItem('todo' , JSON.stringify(todo))
       props.setToDoList(todo)
-      // props.setStatus('')
+    }
+
+
+    function  deleteToDo(id) {
+      const todo = props.ToDoList.filter((val) => val.id != id)
+      localStorage.setItem('todo', JSON.stringify(todo))
+      props.setToDoList(todo)
     }
 
 
@@ -63,7 +66,7 @@ function ToDoList(props) {
                  </button>
                  <p>{val.value} </p>
                  </div>
-                 {!val.isCompleted ? <img className = "cross-image" src = {crossIcon} alt="cross image" />: '' }
+                 {!val.isCompleted ? <img className = "cross-image" src = {crossIcon} alt="cross image" onClick={() => deleteToDo(val.id)} />: '' }
                  </li> 
             })
         }

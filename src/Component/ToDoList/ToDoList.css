@@ -1,8 +1,10 @@
 .todo {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
     height: 350px;
     width: 100%;
-    background-color: white;
-    border: 2px solid red;
+    /* background-color: #25273c; */
+    /* border: 2px solid red; */
     display: flex;
     overflow: auto;
     gap: 0px;
