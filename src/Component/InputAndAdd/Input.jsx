@@ -1,6 +1,5 @@
 import React, { useRef, useState } from 'react'
 import './Input.css'
-// import AddTodo from './AddToDo'
 
 export  const  Input=({AddToDo})=> {
 
