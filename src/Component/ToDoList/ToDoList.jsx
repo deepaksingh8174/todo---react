@@ -5,19 +5,15 @@ import crossIcon from '../../assets/icon-cross.svg'
 
 
 
-function ToDoList() {
+function ToDoList({ToDoList}) {
 
-    let todo = JSON.parse(localStorage.getItem('todo'))
-    if (todo == null) {
-        todo = []
-    }
-    console.log(todo)
+    
 
   return (
     <div className='todo'>
         <ul>
            {
-            todo.map((val, index) => {
+            ToDoList.map((val, index) => {
                return  <li key = {val.id} className='list-item'>
                  <div className='todo-name'>
                  <button className='status-button'></button>

@@ -7,6 +7,34 @@ import {Input} from './Component/InputAndAdd/Input'
 import ToDoList from './Component/ToDoList/ToDoList'
 
 function App() {
+
+  const[todoList, SettodoList] = useState([])
+
+  useEffect(() => {
+      const todo = JSON.parse(localStorage.getItem('todo')) || [];
+      SettodoList(todo)
+  }, [SettodoList])
+
+
+  const generateUniqueId = () => {
+    return `${Date.now()}-${Math.floor(Math.random() * 10000)}`;
+};
+
+
+
+  const AddTodo = (val) => {
+    const todoObject = {
+        id : generateUniqueId(),
+        value : val,
+        isCompleted : false
+    }
+    if (val != "") {
+        const updatedTodo = [...todoList, todoObject]
+        SettodoList(updatedTodo)
+        localStorage.setItem('todo', JSON.stringify(updatedTodo))
+    } 
+}
+
   
   
   return (
@@ -17,9 +45,9 @@ function App() {
 
         <h1>TODO</h1>
 
-        <Input />
+        <Input  AddToDo = {AddTodo}/>
 
-        <ToDoList />
+        <ToDoList  ToDoList ={ todoList}/>
 
         <Footer />
 

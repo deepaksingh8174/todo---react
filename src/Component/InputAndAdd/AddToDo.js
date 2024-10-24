@@ -22,11 +22,7 @@ const AddTodo = (value) => {
         isCompleted : false
     }
     if (value != "") {
-        if (Array.isArray(toDoList)) {
-            toDoList.push(todoObject)
-        }
-        console.log(toDoList)
-        localStorage.setItem('todo', JSON.stringify(toDoList))
+        
     } 
 }
 
