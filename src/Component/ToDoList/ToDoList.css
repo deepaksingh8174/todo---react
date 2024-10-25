@@ -8,6 +8,7 @@
     display: flex;
     overflow: auto;
     gap: 0px;
+    border-bottom: ;
   }
 
   ul {
@@ -19,6 +20,7 @@
     justify-content: space-between;
     align-items: center;
     background-color: #25273c;
+    border-bottom: 0.1rem solid rgb(51 57 55);
 }
 
 .todo-name {
