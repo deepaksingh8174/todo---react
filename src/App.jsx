@@ -56,7 +56,7 @@ function App() {
 
         <ToDoList  ToDoList = { todoList} status = {todoStatus}  setToDoList = {SettodoList}  setStatus = {SettodoStatus}/>
 
-        <Footer count = {activeToDoCount} setStatus = {SettodoStatus}/>
+        <Footer count = {activeToDoCount} setStatus = {SettodoStatus} status = {todoStatus}/>
 
         </div>
 

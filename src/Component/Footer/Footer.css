@@ -21,3 +21,7 @@
   .todo-status:hover {
     cursor: pointer;
   }
+
+  .blue-background {
+    color: blue;
+  }
