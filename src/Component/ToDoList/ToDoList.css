@@ -55,7 +55,8 @@ p {
 }
 
 .completed{
-    background: url(../../assets/icon-check.svg) no-repeat center center  ;
+    background: url(../../assets/icon-check.svg) no-repeat center center;
+    background-color: rgb(145, 165, 239)
 }
 
 

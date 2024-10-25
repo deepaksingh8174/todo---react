@@ -57,6 +57,9 @@ function ToDoList(props) {
  
   return (
     <div className='todo'>
+      {todo.length == 0 ? (
+          <p style={{ margin: 'auto' }}>No ToDo's Available !!!</p>
+      ):(
         <ul>
            {
             todo.map((val, index) => {
@@ -70,7 +73,8 @@ function ToDoList(props) {
                  </li> 
             })
         }
-        </ul>
+        </ul> 
+      )}
     </div>
   )
 }
