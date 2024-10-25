@@ -22,7 +22,7 @@ export  const  Input=({AddToDo})=> {
   return (
     <div className='input-button'>
         <input value={input} type="text" placeholder='Enter your todo...' onChange={(e)=>{setInput(e.target.value)}}  onKeyDown= {(e) => clickEnterButton(e)}/>
-        <button className='add-button' onClick={clickAddButton} > add </button>
+        <button className='add-button' onClick={clickAddButton} > Add </button>
     </div>
   )
 }

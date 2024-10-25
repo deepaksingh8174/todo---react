@@ -13,18 +13,24 @@ input {
     height: 50px;
     padding-left: 15px;
     margin-bottom: 30px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
     flex: 1;
+    outline: none;
   }
   
   
   .add-button {
-    height: 50px;
+    height: 49px;
     width: 70px;
-    background-color: white;
+    background-color: #b4c4cc;
     border: 0.5px solid rgba(255, 255, 255, 0.2);
     border-radius: 8px;
     padding: 0px;
     margin: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border: none;
   }
   
   .add-button:hover {
